@@ -1,0 +1,110 @@
+& when (@media-common = true) {
+    .container-sticky-block {
+        display: none;
+        background-color: #fff;
+        box-shadow: -1px 7px 6px 0 #aaa;
+        height: 150px;
+
+        &.sticky {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+        }
+
+        .sticky-container {
+            .lib-vendor-prefix-display();
+            align-items: center;
+            justify-content: space-around;
+            margin: 0 auto;
+            padding: 0 15px;
+            max-width: 1200px;
+            width: 100%;
+
+            .product {
+                &-details-sticky {
+                    width: 30%;
+                }
+
+                &.overview {
+                    .lib-font-size(@font-size__xl);
+                    .lib-css(font-weight, @font-weight__bold);
+                    text-transform: uppercase;
+                }
+            }
+
+            .price-container {
+                .price {
+                    .lib-font-size(@font-size__l);
+                    .lib-css(font-weight, @font-weight__bold);
+                }
+            }
+        }
+
+        .box-tocart {
+            margin: 0;
+
+            .fieldset {
+                margin: 0;
+
+                .field.qty {
+                    display: none;
+                }
+
+                .action.primary.tocart {
+                    width: 100%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .widget {
+        .block-title {
+            text-align: center;
+            strong {
+                .lib-css(color, @color-black);
+                .lib-font-size(@font-size__xl);
+                text-transform: uppercase;
+                position: relative;
+
+                &:before,
+                &:after {
+                    background-image: url(../images/double-arrows.png);
+                    background-repeat: no-repeat;
+                    content: "";
+                    display: block;
+                    background-size: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 5px;
+                    width: 25px;
+                }
+
+                &:before {
+                    transform: rotate(180deg);
+                    left: -35px;
+                }
+
+                &:after {
+                    right: -35px;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .container-sticky-block {
+
+        .sticky-container {
+            .product {
+                &-details-sticky {
+                    display: none;
+                }
+            }
+        }
+    }
+}

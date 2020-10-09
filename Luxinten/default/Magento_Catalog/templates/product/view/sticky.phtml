@@ -1,0 +1,11 @@
+<?php /** @var View $block */
+
+use Magento\Catalog\Block\Product\View;
+
+?>
+<div class="container-sticky-block" data-mage-init='{"stickyProduct": {}}'>
+    <div class="sticky-container">
+        <?= $block->getImage($block->getProduct(), 'product_small_image')->toHtml() ?>
+        <?= $block->getChildHtml() ?>
+    </div>
+</div>

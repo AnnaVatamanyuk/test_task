@@ -1,0 +1,2 @@
+Title,URL,Content
+Feature products,feature-products,"<p>{{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" title=""Featured Products"" show_pager=""0"" products_count=""4"" template=""Magento_CatalogWidget::product/widget/content/feature_widget.phtml"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]""}}</p>"
